@@ -3,25 +3,31 @@ import ReactDOM from 'react-dom'
 
 
 
+/**
+ 
+const Header = ({course}) => <h1>{course}</h1>  una forma corta de crear el componente Header
+ */
+
 const Header = (props) =>{
+  const {course} = props
 
   console.log(props)
   return (
-    <div>
+    <>
       <h1 style={{color: props.color}}>
-        {props.course}
+        {course}
       </h1>
-    </div>
+    </>
   )
 }
 
 const Part = (props)=>{
   return(
-    <div>
+    <>
       <p style={{color:props.color}}>{props.name1} {props.amount1}</p>
       <p>{props.name2} {props.amount2}</p>
       <p>{props.name3} {props.amount3}</p>
-    </div>
+    </>
   )
 }
 
